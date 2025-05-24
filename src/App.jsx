@@ -16,7 +16,7 @@ const allRoutes = createBrowserRouter(
     { path: "/editprofile", element: <EditProfile /> },
   ],
   {
-    basename: process.env.NODE_ENV === "production" ? "/React" : "/",
+    basename: process.env.NODE_ENV === "production" ? "/Web" : "/",
   }
 );
 
