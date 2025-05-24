@@ -1,0 +1,176 @@
+:root {
+  --bg-color: #212121;
+  --dbBox-shadow: 0px 0px 10px #000;
+  --profile-photo: url("/public/images/dark.png");
+  --text-color: #cecdcd;
+}
+
+.lightmode {
+  --bg-color: #cecdcd;
+  --dbBox-shadow: 0px 0px 10px #ccc;
+  --profile-photo: url("/public/images/light.png");
+  --text-color: #212121;
+}
+
+.dbBox {
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  box-shadow: var(--dbBox-shadow);
+  border-radius: 10px;
+  height: 90%;
+  max-height: 750px;
+  max-width: 1300px;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cover-container {
+  position: relative;
+  width: 100%;
+  height: 28%;
+  min-height: 25vh;
+}
+
+.cover {
+  width: 100%;
+  height: 100%;
+  min-height: 25vh;
+  background-image: url("/public/images/cover3.jpg");
+  background-size: cover;
+  border-radius: 1vw 1vw 0 0;
+}
+
+/* PROFILE PHOTO PERFECTLY CENTERED BETWEEN COVER AND DETAILS */
+.profilephoto {
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  transform: translate(-50%, 50%);
+  width: 18vw;
+  height: 18vw;
+  min-width: 80px;
+  min-height: 80px;
+  max-width: 300px;
+  max-height: 300px;
+  background-color: aqua;
+  border-radius: 50%;
+  z-index: 2;
+  border: 6px solid var(--edit-details-bg-color);
+  box-shadow: 0 0 1vw rgba(0, 0, 0, 0.7);
+  background-image: var(--profile-photo);
+  background-size: cover;
+}
+.male{
+  background-image: url("/public/images/male.png")
+}
+.female{
+  background-image: url("/public/images/female.png")
+}
+.details {
+  width: 100%;
+  height: 72%;
+  background-color: var(--bg-color);
+  border-radius: 0 0 1vw 1vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+}
+.bio {
+  background-color: var(--edit-details-bg-color);
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 2%;
+  align-items: center;
+  border-radius: 1vw;
+  box-shadow: 0 0 1vw rgba(0, 0, 0, 0.7);
+  width: 30%;
+  height: 50%;
+}
+.leavebio {
+  width: 55%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+}
+.name {
+  background-color: var(--edit-details-bg-color);
+  border-radius: 1vw;
+  box-shadow: 0 0 1vw rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.logedit {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+@media (max-width: 1000px) {
+  .profilephoto {
+    width: 22vw;
+    height: 22vw;
+  }
+}
+@media (max-width: 800px) {
+  .profilephoto {
+    width: 30vw;
+    height: 30vw;
+  }
+  .bio {
+    top: -12%;
+    left: 40%;
+    width: 55%;
+    height: 30%;
+  }
+  .leavebio {
+    top: 25%;
+    width: 90%;
+    height: 70%;
+    left: 5%;
+  }
+  .details h1 {
+    font-size: 2em;
+  }
+  .details h2 {
+    font-size: 1.5em;
+  }
+  .details h3 {
+    font-size: 1.2em;
+  }
+}
+@media (max-width: 500px) {
+  .profilephoto {
+    width: 35vw;
+    height: 35vw;
+  }
+  .details h1 {
+    font-size: 1.3em;
+  }
+  .details h2 {
+    font-size: 1em;
+  }
+  .details h3 {
+    font-size: 0.9em;
+  }
+  .bio {
+    width: 55%;
+    height: 25%;
+  }
+}

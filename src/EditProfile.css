@@ -1,0 +1,239 @@
+:root {
+  --bg-color: #212121;
+  --edit-details-bg-color: #222831;
+}
+.lightmode {
+  --bg-color: #faf6e9;
+  --edit-details-bg-color: #ddeb9d;
+}
+.bioform {
+  background-color: var(--bg-color);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.editprofilepic {
+  background-color: var(--edit-details-bg-color);
+  width: 30%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 1vw;
+  box-shadow: 0 0 1vw rgba(0, 0, 0, 0.7);
+}
+.editotherdetails {
+  background-color: var(--edit-details-bg-color);
+  height: 95%;
+  width: 60%;
+  margin-left: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 1vw;
+  box-shadow: 0 0 1vw rgba(0, 0, 0, 0.7);
+  position: relative;
+}
+.selectprofilepic {
+  width: 100%;
+  position: relative;
+  left: 10%;
+}
+#username {
+  width: 50%;
+  height: 5%;
+  resize: vertical;
+  border-radius: 0.5vw;
+  box-shadow: 0 0 1vw rgba(0, 0, 0, 0.5);
+  padding: 1vw;
+  font-size: large;
+}
+#bio {
+  width: 50%;
+  height: 20%;
+  resize: vertical;
+  border-radius: 1vw;
+  box-shadow: 0 0 1vw rgba(0, 0, 0, 0.7);
+  padding: 0.5vw;
+  font-size: large;
+}
+.editbtn {
+  font-size: 2vw;
+  width: 20%;
+  height: auto;
+  padding: 4px 4px;
+  border-radius: 10px;
+  border: 1px solid var(--theme-toggler-button-color);
+  background-color: var(--edit-details-bg-color);
+  color: var(--theme-toggler-button-color);
+  cursor: pointer;
+}
+.editbtn:hover {
+  transform: scale(1.05);
+}
+.rmvbtn {
+  font-size: 1.5vw;
+  width: 40%;
+  height: auto;
+  padding: 4px 4px;
+  border-radius: 10px;
+  border: 1px solid var(--theme-toggler-button-color);
+  background-color: var(--edit-details-bg-color);
+  color: var(--theme-toggler-button-color);
+  cursor: pointer;
+}
+.rmvbtn:hover {
+  transform: scale(1.05);
+}
+.changepass {
+  position: absolute;
+  left: 6%;
+  bottom: 5%;
+  font-size: 1.5vw;
+  width: 20%;
+  height: auto;
+  padding: 4px 4px;
+  border-radius: 10px;
+  border: 1px solid var(--theme-toggler-button-color);
+  background-color: var(--edit-details-bg-color);
+  color: var(--theme-toggler-button-color);
+  cursor: pointer;
+  z-index: 3;
+}
+.changepass:hover {
+  transform: scale(1.05);
+}
+.changepassword {
+  background-color: var(--edit-details-bg-color);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 1vw;
+  box-shadow: 0 0 1vw rgba(0, 0, 0, 0.7);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 4;
+}
+.changepassword input {
+  width: 50%;
+  height: 10%;
+  resize: vertical;
+  border-radius: 1vw;
+  box-shadow: 0 0 1vw rgba(0, 0, 0, 0.7);
+  padding: 1vw;
+  font-size: large;
+}
+@media (max-width: 1000px) {
+  #username {
+    width: 70%;
+  }
+  #bio {
+    width: 70%;
+  }
+  .changepassword input {
+    width: 70%;
+  }
+}
+@media (max-width: 800px) {
+  h1 {
+    font-size: 1.6em;
+  }
+  h2 {
+    font-size: 1.2em;
+  }
+  h3 {
+    font-size: 1.3em;
+  }
+  h4 {
+    font-size: 1em;
+  }
+  #bio {
+    width: 80%;
+    height: 20%;
+  }
+  #username {
+    width: 80%;
+    height: 8%;
+  }
+  .editotherdetails {
+    position: absolute;
+    bottom: 2%;
+    width: 90%;
+    height: 75%;
+    margin-left: 0;
+  }
+  .editprofilepic {
+    position: absolute;
+    top: -12%;
+    right: 5%;
+    width: 55%;
+    height: 30%;
+  }
+  .selectprofilepic {
+    left: 2%;
+  }
+  .changepass {
+    bottom: 3.8%;
+    font-size: 2.5vw;
+    width: 30%;
+  }
+  .rmvbtn {
+    font-size: 2.5vw;
+    width: 30%;
+    padding:2%;
+  }
+  .editbtn {
+    font-size: 2.5vw;
+    width: 25%;
+    padding:1%;
+  }
+}
+@media (max-width: 500px) {
+    .editprofilepic{
+      height:25%;
+    }
+    .editbtn{
+      font-size: 4vw;
+      width: 25%;
+      padding: 2.5%;
+    }
+    .rmvbtn {
+      font-size: 4vw;
+      width: 25%;
+      padding: 2.5%;
+    }
+    .changepass {
+      font-size: 2.8vw;;
+      padding:2.5%;
+      width: 32%;
+    }
+    #s{
+      position: relative;
+      left: 35%;
+    }
+    .editprofilepic button{
+      width:40%;
+      font-size: 3vw;
+      padding:1%;
+    }
+    h3{
+      font-size: 1.1em;
+    }
+    h4 {
+      font-size: 0.8em;
+    }
+    #bio {
+      width: 90%;
+      height: 20%;
+      font-size: 1em;
+    }
+    
+}
